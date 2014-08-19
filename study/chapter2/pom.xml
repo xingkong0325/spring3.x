@@ -5,7 +5,7 @@
   <groupId>com.baobaotao</groupId>
   <artifactId>chapter2</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
 
   <name>chapter2</name>
   <url>http://maven.apache.org</url>
@@ -15,7 +15,7 @@
    	<spring.version>3.1.4.RELEASE</spring.version>
 	<log4j.version>1.2.12</log4j.version>
 	<org.slf4j.version>1.6.1</org.slf4j.version>
-	<junit.version>4.4</junit.version>
+	<junit.version>4.7</junit.version>
 	<dom4j.version>1.6.1</dom4j.version>
 	<jaxen.version>1.1.4</jaxen.version>
 	<aspectj.version>1.6.9</aspectj.version>
@@ -37,7 +37,6 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${junit.version}</version>
-			<scope>test</scope>
 		</dependency>
 
 		<dependency>
@@ -195,6 +194,13 @@
 			<artifactId>cglib-nodep</artifactId>
 			<version>3.1</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>3.1.4.RELEASE</version>
+		</dependency>
+		
 		
   </dependencies>
 </project>
