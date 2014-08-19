@@ -1,7 +1,7 @@
-DROP DATABASE IF EXIT sampledb;
+DROP DATABASE IF EXISTS sampledb;
 CREATE DATABASE sampledb DEFAULT CHARACTER SET utf8;
 USE sampledb;
-##´´½¨ÓÃ»§±í
+##åˆ›å»ºç”¨æˆ·è¡¨
 CREATE TABLE t_user(
  user_id INT auto_increment PRIMARY KEY,
  user_name VARCHAR(30),
@@ -10,7 +10,7 @@ CREATE TABLE t_user(
  last_visit datetime,
  last_ip VARCHAR(23)
 )ENGINE=InnoDB; 
-##´´½¨ÓÃ»§µÇÂ½ÈÕÖ¾±í
+##åˆ›å»ºç”¨æˆ·ç™»é™†æ—¥å¿—è¡¨
 CREATE TABLE t_login_log(
  login_log_id INT auto_increment PRIMARY key,
  user_id int,
