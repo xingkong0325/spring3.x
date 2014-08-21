@@ -6,17 +6,18 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
 
-import com.baobaotao.reflect.Car;
+import com.baobaotao.Car;
 
-@SuppressWarnings("deprecation")
 public class BeanFactoryTest {
-	
-	public static void main(String[] args){
-		ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-		Resource res = resolver.getResource("classpath:com/baobaotao/beanfactory/beans.xml");
-		BeanFactory bf = new XmlBeanFactory(res);
-		Car car = bf.getBean("car", Car.class);
-		car.introduce();
+	public static void main(String[] args) throws Throwable{
+	   ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
+	   Resource res = resolver.getResource("classpath:com/baobaotao/beanfactory/beans.xml");
+	   System.out.println(res.getURL());
+       BeanFactory bf = new XmlBeanFactory(res);
+       System.out.println("init BeanFactory.");
+       
+       Car car = bf.getBean("car",Car.class);
+       System.out.println("car bean is ready for use!");
+       car.introduce();
 	}
-
 }
