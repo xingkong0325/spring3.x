@@ -7,7 +7,7 @@ import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
-public class Car implements BeanFactoryAware, BeanNameAware, InitializingBean,
+public class Car1 implements BeanFactoryAware, BeanNameAware, InitializingBean,
 		DisposableBean {
 	private String brand;
 	private String color;
@@ -16,7 +16,7 @@ public class Car implements BeanFactoryAware, BeanNameAware, InitializingBean,
 	private BeanFactory beanFactory;
 	private String beanName;
 
-	public Car() {
+	public Car1() {
 		System.out.println("调用Car()构造函数。");
 	}
 

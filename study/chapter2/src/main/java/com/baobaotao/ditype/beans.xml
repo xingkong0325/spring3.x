@@ -5,13 +5,52 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	<!-- 属性注入 -->
-	<bean id="car" class="com.baobaotao.ditype.Car">
+	<bean id="car5" class="com.baobaotao.ditype.Car">
 		<property name="brand" value="红旗&amp;CA72"/>
 		<property name="maxSpeed" value="200"/>
 		<property name="price" value="20000.00"/>
 	</bean>
-	<!--<bean id="boss" class="com.baobaotao.ditype.Boss">
+	<bean id="car1" class="com.baobaotao.fb.CarFactoryBean"
+		p:carInfo="红旗&amp;CA72,200,20000.00" />
+	<bean id="boss" class="com.baobaotao.attr.Boss">
 		<property name="car" ref="car"/>
-	</bean-->
+	</bean>
+	
+	<bean id="boss1" class="com.baobaotao.attr.Boss">
+		<property name="favorites">
+			<list>
+				<value>看报</value>
+				<value>赛车</value>
+				<value>高尔夫</value>
+			</list>
+		</property>
+		<property name="jobs">
+			<map>
+				<entry>
+					<key><value>AM</value></key>
+					<value>会见客户</value>
+				</entry>
+				<entry>
+					<key><value>PM</value></key>
+					<value>公司内部会议</value>
+				</entry>
+			</map>
+		</property>
+		<property name="mails">
+			<props>
+				<prop key="jobMail">bahaidong@163.com</prop>
+				<prop key="lifeMail">xingkong0325@126.com</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="magicBoss" class="com.baobaotao.injectfun.MagicBoss">
+		<lookup-method name="getCar" bean="car"/>
+	</bean>
+	
+	<bean id="boss2" class="com.baobaotao.injectfun.Boss1">
+		<replaced-method name="getCar" replacer="boss3"/>
+	</bean>
+	<bean id="boss3" class="com.baobaotao.injectfun.Boss2"></bean>
 
 </beans>

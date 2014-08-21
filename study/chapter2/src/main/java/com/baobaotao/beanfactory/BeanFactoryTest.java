@@ -6,7 +6,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
 
-import com.baobaotao.Car;
+import com.baobaotao.Car1;
 
 public class BeanFactoryTest {
 	public static void main(String[] args) throws Throwable{
@@ -16,7 +16,7 @@ public class BeanFactoryTest {
        BeanFactory bf = new XmlBeanFactory(res);
        System.out.println("init BeanFactory.");
        
-       Car car = bf.getBean("car",Car.class);
+       Car1 car = bf.getBean("car",Car1.class);
        System.out.println("car bean is ready for use!");
        car.introduce();
 	}
