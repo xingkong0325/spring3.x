@@ -33,7 +33,7 @@
 		destroy-method="close" 
 		p:driverClassName="${driverClassName}"
 		p:url="${url}" 
-		p:username="{username}"
+		p:username="${userName}"
 		p:password="${password}" />
 		
 	<bean id="nativeJdbcExtractor" lazy-init="true" 
@@ -51,6 +51,35 @@
 		
 	<bean id="lobHandler" class="org.springframework.jdbc.support.lob.DefaultLobHandler"
 		lazy-init="true" />
+		
+	<bean id="sender"
+		class="org.springframework.mail.javamail.JavaMailSenderImpl"
+		p:host="smtp.163.com"
+		p:username="bahaidong"
+		p:password="165132298vs">
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="freeMarkerConfigurer"
+		  class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer"
+		  p:templateLoaderPath="classpath:mailTemplate/">
+		<property name="freemarkerSettings">
+			<props>
+				<prop key="template_update_delay">1800</prop>
+				<prop key="default_encoding">UTF-8</prop>
+				<prop key="locale">zh_CN</prop>
+			</props>
+		</property>
+	</bean>		
+	
+	<bean id="taskExecutor" 
+	      class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor"
+	      p:corePoolSize="10"
+	      p:maxPoolSize="30"/>	
 		
 	<!-- 配置事务管理器 -->
 	<bean id="transactionManager"
