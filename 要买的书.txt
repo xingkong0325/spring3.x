@@ -1,0 +1,16 @@
+华章专业开发者丛书·Java并发编程实战
+Java性能优化权威指南
+Head First设计模式（中文版）
+
+java编程入门类：
+	《Java编程思想》、《Agile Java》中文版
+java编程进阶类：
+	《重构改善既有代码的设计》、《测试驱动开发 by Example》
+java架构师之路：
+	《Expert One-on-One J2EE Design and Development without EJB》、《企业应用架构模式》、
+	《敏捷软件开发原则、模式与实践》
+软件开发过程：
+	《UML精粹》、《解析极限编程 拥抱变化》XP、《统一软件开发过程》UP、
+	《敏捷建模》AM
+软件项目管理：
+	《快速软件开发》
