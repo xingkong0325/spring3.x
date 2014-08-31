@@ -2,6 +2,7 @@ package com.baobaotao.domain;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 public class User implements Serializable {
 
@@ -16,6 +17,7 @@ public class User implements Serializable {
 	private int credits;
 	private String lastIp;
 	private Date lastVisit;
+	private List<LoginLog> logs;
 	public int getUserId() {
 		return userId;
 	}
@@ -52,5 +54,13 @@ public class User implements Serializable {
 	public void setLastVisit(Date lastVisit) {
 		this.lastVisit = lastVisit;
 	}
-
+	public List<LoginLog> getLogs() {
+		return logs;
+	}
+	public void setLogs(List<LoginLog> logs) {
+		this.logs = logs;
+	}
+	public void addLoginLog(LoginLog log) {
+		logs.add(log);
+	}
 }
