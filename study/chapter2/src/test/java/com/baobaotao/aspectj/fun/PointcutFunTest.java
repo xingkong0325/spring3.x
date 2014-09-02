@@ -12,7 +12,7 @@ public class PointcutFunTest {
 		
 		String configPath = "com/baobaotao/aspectj/fun/beans.xml";
 		ApplicationContext ctx = new ClassPathXmlApplicationContext(configPath);
-		Waiter naiveWaiter = (Waiter) ctx.getBean("naiveWaiter");
+		//Waiter naiveWaiter = (Waiter) ctx.getBean("naiveWaiter");
 		Waiter naughtyWaiter = (Waiter) ctx.getBean("naughtyWaiter");
 //		naiveWaiter.greetTo("John");
 //		naiveWaiter.serveTo("John");

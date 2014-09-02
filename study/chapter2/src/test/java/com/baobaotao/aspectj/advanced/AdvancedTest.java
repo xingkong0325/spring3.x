@@ -3,7 +3,6 @@ package com.baobaotao.aspectj.advanced;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.baobaotao.SmartSeller;
 import com.baobaotao.Waiter;
 
 public class AdvancedTest {
@@ -11,7 +10,7 @@ public class AdvancedTest {
 		String configPath = "com/baobaotao/aspectj/advanced/beans.xml";
 		ApplicationContext ctx = new ClassPathXmlApplicationContext(configPath);
 		Waiter naiveWaiter = (Waiter) ctx.getBean("naiveWaiter");
-		Waiter naughtyWaiter = (Waiter) ctx.getBean("naughtyWaiter");
+		//Waiter naughtyWaiter = (Waiter) ctx.getBean("naughtyWaiter");
 //		naiveWaiter.greetTo("John");
 //		naiveWaiter.serveTo("John");
 //		naughtyWaiter.greetTo("Tom");
