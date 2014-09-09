@@ -50,8 +50,8 @@ public class UserDaoTest extends BaseDaoTest {
 	}
 	
 	//验证数据库保存的正确性
-	//@Test
-	//@ExpectedDataSet("BaobaoTao.ExpectedSaveUsers.xls")// 准备验证数据
+	@Test
+	@ExpectedDataSet("BaobaoTao.ExpectedSaveUsers.xls")// 准备验证数据
 	public void saveUsers()throws Exception  {
 		List<User> users  = XlsDataSetBeanFactory.createBeans(UserDaoTest.class,"BaobaoTao.SaveUsers.xls", "t_user", User.class);
 		for(User u:users){

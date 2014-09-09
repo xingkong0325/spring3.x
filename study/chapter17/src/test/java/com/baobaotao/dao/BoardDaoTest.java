@@ -41,7 +41,7 @@ public class BoardDaoTest extends BaseDaoTest{
 	@DataSet("BaobaoTao.Boards.xls")//准备数据 
 	@ExpectedDataSet("BaobaoTao.ExpectedBoards.xls")
 	public void removeBoard(){
-		Board board = boardDao.get(7);
+		Board board = boardDao.get(2);
 		boardDao.remove(board);
 	}
 	
