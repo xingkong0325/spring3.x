@@ -32,6 +32,9 @@
 				<prop key="hibernate.dialect">
 					org.hibernate.dialect.MySQLDialect
 				</prop>
+				<prop key="hibernate.query.factory_class">
+					org.hibernate.hql.ast.ASTQueryTranslatorFactory
+				</prop>
 				<prop key="hibernate.show_sql">true</prop>
 				<prop key="hibernate.cache.provider_class">
 					org.hibernate.cache.EhCacheProvider
