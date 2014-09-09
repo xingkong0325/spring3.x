@@ -28,7 +28,27 @@ public class TestHarness {
 		startGate.countDown();
 		endGate.await();
 		long end = System.nanoTime();
-				
+		System.out.println(end - start);		
 		return end - start;
 	}
+	
+	public static void main(String[] args) throws InterruptedException{
+		new TestHarness().timeTasks(5, new TestTask());
+	}
+}
+
+class TestTask implements Runnable {
+
+	public void run() {
+		for(int i=0; i<10; i++){
+			System.out.println(i);
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				Thread.interrupted();
+				e.printStackTrace();
+			}
+		}
+	}
+	
 }

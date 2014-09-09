@@ -26,7 +26,7 @@
 		class="org.springframework.context.support.ResourceBundleMessageSource"
 		p:basename="i18n/messages" />
 
-    <!--WEB异常解析处理
+    <!--WEB异常解析处理-->
 	<bean id="exceptionResolver" class="com.baobaotao.web.ForumHandlerExceptionResolver">
 		<property name="defaultErrorView">
 			<value>fail</value>
@@ -36,5 +36,5 @@
 				<prop key="java.lang.RuntimeException">fail</prop>
 			</props>
 		</property>
-	</bean>-->
+	</bean>
 </beans>  
