@@ -58,7 +58,7 @@
 	                    return selectBoxs.value;
 	                }else{//many checkbox ,so is a array 
 	                  var ids = "";
-	                  var split = ""
+	                  var split = "";
 	                  for(var i = 0 ; i < selectBoxs.length ; i++){
 	                     if(selectBoxs[i].checked){
 	                        ids += split+selectBoxs[i].value;

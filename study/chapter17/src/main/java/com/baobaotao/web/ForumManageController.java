@@ -49,18 +49,7 @@ public class ForumManageController extends BaseController {
 		view.setViewName("/listAllBoards");
 		return view;
 	}
-
-	/**
-	 *  添加一个主题帖
-	 * @param request
-	 * @param response
-	 * @return
-	 */
-	@RequestMapping(value = "/forum/addBoardPage", method = RequestMethod.GET)
-	public String addBoardPage() {
-		return "/addBoard";
-	}
-
+	
 	/**
 	 * 添加一个主题帖
 	 * @param request
@@ -72,6 +61,17 @@ public class ForumManageController extends BaseController {
 	public String addBoard(Board board) {
 		forumService.addBoard(board);
 		return "/addBoardSuccess";
+	}
+
+	/**
+	 *  添加一个主题帖
+	 * @param request
+	 * @param response
+	 * @return
+	 */
+	@RequestMapping(value = "/forum/addBoardPage", method = RequestMethod.GET)
+	public String addBoardPage() {
+		return "/addBoard";
 	}
 
 	/**
