@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
+encoding//src/main/java/org/crazyit/hrsystem/domain/Application.hbm.xml=UTF-8
+encoding//src/main/java/org/crazyit/hrsystem/domain/Attend.hbm.xml=UTF-8
+encoding//src/main/java/org/crazyit/hrsystem/domain/AttendType.hbm.xml=UTF-8
+encoding//src/main/java/org/crazyit/hrsystem/domain/CheckBack.hbm.xml=UTF-8
+encoding//src/main/java/org/crazyit/hrsystem/domain/Employee.hbm.xml=UTF-8
+encoding//src/main/java/org/crazyit/hrsystem/domain/Payment.hbm.xml=UTF-8
+encoding//src/main/resources/daoContext.xml=UTF-8
+encoding//src/test/java=UTF-8
+encoding/<project>=UTF-8
